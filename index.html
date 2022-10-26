@@ -11,7 +11,7 @@
             reqObj.open("GET", "songlist.json");
             reqObj.onload = function() {
                 var stringSong = console.log(this.responseText);
-                document.getElementById("jsonstring").innerHTML = stringSong
+                document.getElementById("jsonstring").innerHTML = stringSong;
             };
 
             reqObj.send();
