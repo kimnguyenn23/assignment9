@@ -10,8 +10,17 @@
             var reqObj = new XMLHttpRequest();
             reqObj.open("GET", "songlist.json");
             reqObj.onload = function() {
-                console.log(this.responseText);
+                var stringSong = console.log(this.responseText);
+                return stringSong
             };
+
+            var playlist = onload()
+            cnsole.log(playlist)
+            // there are 18 songs in the json file 
+            // for (var i = 0; i <19;i++) {
+            //     document.get
+            // }
+
             reqObj.send();
         </script>
     </body>
