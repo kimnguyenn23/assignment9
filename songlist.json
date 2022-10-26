@@ -1,0 +1,217 @@
+{
+    "songs": {
+      "heading": "The Most Amazing Song List",
+      "genres": {
+        "genre": [
+          "Hip Hop",
+          "Pop",
+          "Country",
+          "RnB",
+          "Indie",
+          "Jazz",
+          "Classical",
+          "Indie Pop",
+          "Hyperpop",
+          "EDM",
+          "Rap"
+        ]
+      },
+      "song": [
+        {
+          "title": "Sparks Fly",
+          "artist": "Taylor Swift",
+          "year": 2010,
+          "genres": {
+            "genre": [
+              "Country",
+              "Pop"
+            ]
+          }
+        },
+        {
+          "title": "Love Story",
+          "artist": "Taylor Swift",
+          "year": 2008,
+          "genres": {
+            "genre": "Pop"
+          }
+        },
+        {
+          "title": "Wings",
+          "artist": "Birdy",
+          "year": 2013,
+          "genres": {
+            "genre": [
+              "Pop",
+              "Indie"
+            ]
+          }
+        },
+        {
+          "title": "YOUTH",
+          "artist": "Troye Sivan",
+          "year": 2015,
+          "genres": {
+            "genre": "Pop"
+          }
+        },
+        {
+          "title": "let you",
+          "artist": "iann dior",
+          "year": 2022,
+          "genres": {
+            "genre": [
+              "Pop",
+              "Hip Hop",
+              "RnB",
+              "Indie",
+              "Rap"
+            ]
+          }
+        },
+        {
+          "title": "Why",
+          "artist": "Bazzi",
+          "year": 2018,
+          "genres": {
+            "genre": [
+              "Pop",
+              "RnB"
+            ]
+          }
+        },
+        {
+          "title": "good 4 u",
+          "artist": "Olivia Rodrigo",
+          "year": 2021,
+          "genres": {
+            "genre": [
+              "Pop",
+              "RnB",
+              "Indie Pop"
+            ]
+          }
+        },
+        {
+          "title": "This is Why",
+          "artist": "Paramore",
+          "year": 2022,
+          "genres": {
+            "genre": [
+              "Indie",
+              "Rock"
+            ]
+          }
+        },
+        {
+          "title": "Falling Behind",
+          "artist": "Laufey",
+          "year": 2022,
+          "genres": {
+            "genre": [
+              "Jazz",
+              "RnB",
+              "Indie"
+            ]
+          }
+        },
+        {
+          "title": "caffeine",
+          "artist": "brakence",
+          "year": 2020,
+          "genres": {
+            "genre": [
+              "RnB",
+              "Hyperpop",
+              "Pop",
+              "Hip Hop",
+              "Rap"
+            ]
+          }
+        },
+        {
+          "title": "I'll Be Your Reason",
+          "artist": "Illenium",
+          "year": 2016,
+          "genres": {
+            "genre": "EDM"
+          }
+        },
+        {
+          "title": "dancing in the kitchen",
+          "artist": "Lany",
+          "year": 2021,
+          "genres": {
+            "genre": [
+              "Indie",
+              "Pop"
+            ]
+          }
+        },
+        {
+          "title": "Ghost",
+          "artist": "Justin Bieber",
+          "year": 2021,
+          "genres": {
+            "genre": "Pop"
+          }
+        },
+        {
+          "title": "Caroline",
+          "artist": "Amine",
+          "year": 2017,
+          "genres": {
+            "genre": [
+              "RnB",
+              "Hip Hop",
+              "Rap"
+            ]
+          }
+        },
+        {
+          "title": "Best Friend",
+          "artist": "Rex Orange County",
+          "year": 2017,
+          "genres": {
+            "genre": [
+              "Indie",
+              "Pop"
+            ]
+          }
+        },
+        {
+          "title": "Candy",
+          "artist": "Robbie Williams",
+          "year": 2012,
+          "genres": {
+            "genre": [
+              "Indie",
+              "RnB",
+              "Pop",
+              "EDM",
+              "Hip Hop"
+            ]
+          }
+        },
+        {
+          "title": "The Girl With The Flaxen Hair",
+          "artist": "Claude Debussy",
+          "year": 1910,
+          "genres": {
+            "genre": "Classical"
+          }
+        },
+        {
+          "title": "River Flows in You",
+          "artist": "Yiruma",
+          "year": 2001,
+          "genres": {
+            "genre": [
+              "Classical",
+              "Pop"
+            ]
+          }
+        }
+      ]
+    }
+}
