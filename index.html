@@ -93,7 +93,8 @@
 					parse_list = JSON.parse(result);
 					
 					parse_list.forEach(function(list) { 
-					  strHTML += "Title: " + list.title + "Artist: " + list.artist + "Year: " + list.year + "Genre(s): " + list.genre;
+						console.log(list);
+						strHTML += "Title: " + list.title + "Artist: " + list.artist + "Year: " + list.year + "Genre(s): " + list.genre;
 					}) 
 					document.getElementById("data").innerHTML =strHTML;  
 				}
