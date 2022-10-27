@@ -43,11 +43,11 @@
         strSongs = JSON.stringify(data);
         $('#data').html(strSongs);
         // 2. Print as user friendly format 
-        $(document).on('click', '#showTable', function () {
+        $(document).on('click', '#showTable', function() {
             printUserFriendly(data, "showData"); 
         });
 
-        $(document).on('click', '#filter', function () { 
+        $(document).on('click', '#filter', function() { 
             filterGenre(data);
         }); 
     });
@@ -63,17 +63,18 @@
                 //Print out entire song details (title, artists, genre, year)
                 $("showFilteredData").html(data[i]['title']); 
                 result.push(data[i]);
-        } 
-    }
+            } 
+        }
         printUserFriendly(result, "showFilteredData"); 
     }
-    // Credits for logic goes to : https://www.encodedna.com/javascript/populate-json-data-to-html- table-using-javascript.htm
+    
     function printUserFriendly(data, output) { 
         var col = [];
         for (i = 0; i < data.length; i++) {
             for (var key in data[i]) {
                 if (col.indexOf(key) === -1) {
-                    col.push(key) }
+                    col.push(key) 
+                }
             } 
         }
         var table = document.createElement("table");
@@ -87,9 +88,10 @@
     //ADD JSON DATA TO TABLE AS ROWS 
     for (i = 0; i < data.length; i++) {
         tr = table.insertRow(-1);
+
         for (j = 0; j < col.length; j++) {
-        var tabCell = tr.insertCell(-1); 
-        tabCell.innerHTML = data[i][col[j]];
+            var tabCell = tr.insertCell(-1); 
+            tabCell.innerHTML = data[i][col[j]];
         } 
     }
     var divContainer = document.getElementById(output); 
@@ -97,6 +99,7 @@
     divContainer.appendChild(table);
     $(output).toggle();
     }
+    
     }); 
 </script>
 </html>
