@@ -6,6 +6,9 @@
     <title> JSON Song List</title> 
 </head>
 <style> 
+    body {
+        background-color: pink;
+    }
     th,td,div,input {
         font:14 px Verdana; 
     }
@@ -31,11 +34,17 @@
     <form>
         <label for="songs">Choose a genre:</label> 
         <select id="songs" name="songs">
-            <option>Alternative</option> 
+            <option>Hip Hop</option> 
+            <option>Pop</option>
+            <option>Country</option>
+            <option>RnB</option>
             <option>Indie</option> 
-            <option>Electronic</option> 
-            <option>Pop</option> 
-            <option>Christian</option>
+            <option>Jazz</option>
+            <option>Classical</option>
+            <option>Indie Pop</option>
+            <option>Hyperpop</option> 
+            <option>EDM</option> 
+            <option>Rap</option>
         </select>
         <input type="button" id="filter" value="Filter">
     </form>
