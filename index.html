@@ -93,6 +93,7 @@
 					parse_list = JSON.parse(result);
 					
 					parse_list.forEach(function(list) { 
+						console.log("hello");
 						console.log(list);
 						strHTML += "Title: " + list.title + "Artist: " + list.artist + "Year: " + list.year + "Genre(s): " + list.genre;
 					}) 
