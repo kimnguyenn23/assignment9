@@ -9,6 +9,9 @@
     body {
         background-color: pink;
     }
+    h1 {
+        text-align: center;
+    }
     th,td,div,input {
         font:14 px Verdana; 
     }
@@ -21,6 +24,7 @@
 </style>
 
 <body>
+    <h1>Welcome to the Amazing Song List</h1>
     <!-- Raw String -->
     <div id = "data">Loading... </div> </p> </p>
 
@@ -54,9 +58,8 @@
 
 <script language = 'javascript'> 
     $(document).ready(function() {
-    // Load JSON file with AJAX 
         $.getJSON("https://kimnguyenn23.github.io/assignment9/songlist.json", function(data) { 
-        // 1. Print as raw string
+
         strSongs = JSON.stringify(data);
         $('#data').html(strSongs);
         // 2. Print as user friendly format 
@@ -68,7 +71,7 @@
             filterGenre(data);
         }); 
     });
-
+    // filters out the song based on the wanted genre
     function filterGenre(data) {
         var filterLength = 0
         const result = [];
@@ -95,14 +98,14 @@
             } 
         }
         var table = document.createElement("table");
-
-        var tr = table.insertRow(-1); // TABLE ROW 
+        // adding the table and outputting the songs in the wanted format
+        var tr = table.insertRow(-1); 
         for (i = 0; i < col.length; i++) {
-            var th = document.createElement("th"); // TABLE HEADER 
+            var th = document.createElement("th");  
             th.innerHTML = col[i];
             tr.appendChild(th);
     }
-    //ADD JSON DATA TO TABLE AS ROWS 
+
     for (i = 0; i < data.length; i++) {
         tr = table.insertRow(-1);
 
