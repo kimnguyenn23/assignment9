@@ -60,8 +60,8 @@
         // Check if a song's genre array contains the genre 
             if(data[i]['genre'].includes(filteredGenre)) {
                 filterLength += 1;
-            //Print out entire song details (title, artists, genre, year)
-            $("showFilteredData").html(data[i]['title']); 
+                //Print out entire song details (title, artists, genre, year)
+                $("showFilteredData").html(data[i]['title']); 
                 result.push(data[i]);
         } 
     }
