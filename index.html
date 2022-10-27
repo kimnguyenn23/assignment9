@@ -1,173 +1,103 @@
-<!DOCTYPE html>
+<!doctype HTML>
 <html>
-    <head>
-        <title>JSON Song List</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <!-- <body>
-        <h1> Title(s)</h1>
-        <script type="text/javascript">
-            var reqObj = new XMLHttpRequest();
-
-            reqObj.open("GET", "songlist.json");
-            reqObj.onload = function() {
-                var stringSong = console.log(this.responseText);
-                document.getElementById("jsonstring").innerHTML = stringSong;
-            };
-
-            // var playlist = onload()
-            // cnsole.log(playlist)
-            // there are 18 songs in the json file 
-            // for (var i = 0; i <19;i++) {
-            //     document.get
-            // }
-
-            reqObj.send();
-        </script>
-
-    <div id="jsonstring"></div> -->
-
-    <!-- </body> --> 
-
-
-    <body onload="loadFile()">
-        <h1>The Amazing List of Songs</h1>
-            <table id = "songTable">
-            <tr>
-                <td id = "1"></td>
-                <td id = "2"></td>
-                <td id = "3"></td>
-                <td id = "4"></td>
-            </tr>
-            <tr>
-                <td id = "5"></td>
-                <td id = "6"></td>
-                <td id = "7"></td>
-                <td id = "8"></td>
-            </tr>
-            <tr>
-                <td id = "9"></td>
-                <td id = "10"></td>
-                <td id = "11"></td>
-                <td id = "12"></td>
-            </tr>
-            <tr>
-                <td id = "13"></td>
-                <td id = "14"></td>
-                <td id = "15"></td>
-                <td id = "16"></td>
-            </tr>
-            <tr>
-                <td id = "17"></td>
-                <td id = "18"></td>
-                <td id = "19"></td>
-            </tr>
-            </table>
-     <script>
-        // request_songs = new XMLHttpRequest();
-        // reqObj.open("GET", "songlist.json");
-
-        function loadFile() {
-			/* Step 1: Make instance of request object...
-			...to make HTTP request after page is loaded*/
-			request = new XMLHttpRequest();
-			console.log("1 - request object created");
- 
-			// Step 2: Set the URL for the AJAX request to be the JSON file
- 
-			request.open("GET", "songlist.json", true);
-
-			console.log("2 - opened request file");
- 
-			// Step 3: set up event handler/callback
-
-			request.onreadystatechange = function() {
-				console.log("3 - readystatechange event fired.");
- 
-				if (request.readyState == 4 && request.status == 200) {
-
-					// Step 5: wait for done + success
-
-					result = request.responseText;
-                    console.log(result);
-					parse_list = JSON.parse(result);
-					
-					Array.from(parse_list).forEach(function(list) { 
-                        // console.log(list);
-					    strHTML += "Title: " + list.title + "Artist: " + list.artist + "Year: " + list.year + "Genre(s): " + list.genre;
-					}) 
-					document.getElementById("data").innerHTML =strHTML;  
-				}
-				else if (request.readyState == 4 && request.status != 200) {
-
-				document.getElementById("data").innerHTML = "Something is wrong!  Check the logs to see where this went off the rails";
-
-				}
-
-				else if (request.readyState == 3) {
-
-					document.getElementById("data").innerHTML = "Too soon!  Try again";
-
-				}
-
-			}
-		// Step 4: fire off the HTTP request
-			request.send();
-			console.log("4 - Request sent");
-		}
-
-
-        //list = [{"songList":{"listName":"Stephen's List of Songs!","song":[{"number":1,"artist":"Foo Fighters","title":"Learn to Fly","genre":["Alternative","Rock"],"releaseYear":1999},{"number":2,"artist":"DJ Shadow","title":"Rocket Fuel","genre":["Alternative","Rap","Indie"],"releaseYear":2019},{"number":3,"artist":"Cage the Elephant","title":"Ain't No Rest for the Wicked","genre":["Alternative","Rock"],"releaseYear":2008},{"number":4,"artist":"Black Sabbath","title":"War Pigs","genre":["Heavy Metal"],"releaseYear":1970},{"number":5,"artist":"Creedence Clearwater Revival","title":"Fortunate Son","genre":["Hard Rock","Folk"],"releaseYear":1969},{"number":6,"artist":"Garth Brooks","title":"The Thunder Rolls","genre":["Country"],"releaseYear":1991},{"number":7,"artist":"Chemical Brothers","title":"Block Rockin' Beats","genre":["Alternative","Electronic"],"releaseYear":1997},{"number":8,"artist":"Beastie Boys","title":"Sabatoge","genre":["Rap Rock","Punk Rock"],"releaseYear":1994},{"number":9,"artist":"My Chemical Romance","title":"Welcome to the Black Parade","genre":["Alternative","Emo","Pop Punk"],"releaseYear":2006},{"number":10,"artist":"John Williams","title":"Duel of the Fates","genre":["Classical"],"releaseYear":1999},{"number":11,"artist":"Led Zeppelin","title":"Immigrant Song","genre":["Hard Rock","Viking Metal"],"releaseYear":1970},{"number":12,"artist":"Nirvana","title":"Something in the Way","genre":["Acoustic Rock","Alternative"],"releaseYear":1991}]}}]
-
-        // for (var i = 0; i < 19; i++) {
-        //     document.getElementById(i + 1).innerHTML += ("Song number: " + list[0].songList.song[i].number);
-        //     document.getElementById(i + 1).innerHTML += ("<br>");
-        //     document.getElementById(i + 1).innerHTML += ("Song name: " + list[0].songList.song[i].title);
-        //     document.getElementById(i + 1).innerHTML += ("<br>");
-        //     document.getElementById(i + 1).innerHTML += ("Artist: " +list[0].songList.song[i].artist);
-        //     document.getElementById(i + 1).innerHTML += ("<br>");
-            
-        //     document.getElementById(i + 1).innerHTML += ("Genre: ");
-        //     for (var j = 0; j < list[0].songList.song[i].genre.length; j++) {
-        //         document.getElementById(i + 1).innerHTML += (list[0].songList.song[i].genre[j]);
-        //         if (j <  list[0].songList.song[i].genre.length-1) {
-        //             document.getElementById(i + 1).innerHTML += (", ");
-        //         }
-                
-        //     }
-        //     document.getElementById(i + 1).innerHTML += ("<br>");
-        //     document.getElementById(i + 1).innerHTML += ("Released: " + list[0].songList.song[i].releaseYear);
-        //     document.getElementById(i + 1).innerHTML += ("<br>");
-        // }
-    function filterGenres() {
-        document.getElementById("printHere").innerHTML = "";
-        var chosenGenre = document.getElementById("genre").value;
-        for (i = 0; i < 19; i++) {
-            for (var j = 0; j < list[0].songList.song[i].genre.length; j++)
-                if (list[0].songList.song[i].genre[j] == chosenGenre) {
-                    document.getElementById("printHere").innerHTML += (list[0].songList.song[i].title);
-                    document.getElementById("printHere").innerHTML += "<br>";
-    
-                }
-        }
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256- hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script> 
+<head>
+    <meta charset = "utf-8">
+    <title> JSON Song List</title> 
+</head>
+<style> 
+    th,td,div,input {
+        font:14 px Verdana; }
+        table,th,td {
+        border: solid 1px #000000; padding: 2px 3px; text-align: center; border-collapse: collapse;
     }
-    </script>
-    <!-- <form id = "get songs">
-            <select name="genre" id="genre">
-                <option value="Hipe Hop">Hip Hop</option>
-                <option value="Pop">Pop</option>
-                <option value="Country">Country</option>
-                <option value="RnB">RnB</option>
-                <option value="Indie">Indie</option>
-                <option value="Jazz">Jazz</option>
-                <option value="Classical">Classical</option>
-                <option value="Indie Pop">Indie Pop</option>
-                <option value="Hyperpop">Hyperpop</option>
-                <option value="EDM">EDM</option>
-                <option value="Rap">Rap</option>
-            </select>
-            <input type = "button" value = "Filter Genres"  id = "filter" onclick = "filterGenres()"/>
-        </form> -->
-        <div id = "data"></div>
-    </body>
+    th {
+        font-weight:bold; 
+    }
+</style>
+
+<body>
+    <!-- Raw String -->
+    <div id = "data">Loading... </div> </p> </p>
+    <!-- User Friendly -->
+    <input type = "button" id="showTable" value = "Toggle User Friendly View"> 
+    <div id = "showData"></div> </p> </p>
+    <!-- Table -->
+    <h2> Filter My Song List! </h2>
+    <p> Choose from a genre below and click 'Filter' to get a choice of songs in that genre!</p>
+    <form>
+        <label for="songs">Choose a genre:</label> <select id="songs" name="songs">
+        <option>Alternative</option> <option>Indie</option> <option>Electronic</option> <option>Pop</option> <option>Christian</option>
+        </select>
+        <input type="button" id="filter" value="Filter">
+    </form>
+    
+    <div id = "showFilteredData"></div> <p> </p> 
+</body>
+
+<script language = 'javascript'> 
+    $(document).ready(function() {
+    // Load JSON file with AJAX 
+        $.getJSON("https://kimnguyenn23.github.io/assignment9/songlist.json", function(data) { 
+        // 1. Print as raw string
+        strSongs = JSON.stringify(data);
+        $('#data').html(strSongs);
+        // 2. Print as user friendly format 
+        $(document).on('click', '#showTable', function () {
+            printUserFriendly(data, "showData"); 
+        });
+
+        $(document).on('click', '#filter', function () { 
+            filterGenre(data);
+        }); 
+    });
+
+    function filterGenre(data) {
+        var filterLength = 0
+        const result = [];
+        for (i = 0; i < data.length; i++) {
+            var filteredGenre = $("#songs").val();
+        // Check if a song's genre array contains the genre 
+            if(data[i]['genre'].includes(filteredGenre)) {
+                filterLength += 1;
+        //Print out entire song details (title, artists, genre, year)
+        $("showFilteredData").html(data[i]['title']); 
+            result.push(data[i]);
+        } 
+    }
+        printUserFriendly(result, "showFilteredData"); 
+    }
+    // Credits for logic goes to : https://www.encodedna.com/javascript/populate-json-data-to-html- table-using-javascript.htm
+    function printUserFriendly(data, output) { 
+        var col = [];
+        for (i = 0; i < data.length; i++) {
+            for (var key in data[i]) {
+                if (col.indexOf(key) === -1) {
+                    col.push(key) }
+            } 
+        }
+        var table = document.createElement("table");
+
+        var tr = table.insertRow(-1); // TABLE ROW 
+        for (i = 0; i < col.length; i++) {
+            var th = document.createElement("th"); // TABLE HEADER 
+            th.innerHTML = col[i];
+            tr.appendChild(th);
+    }
+    //ADD JSON DATA TO TABLE AS ROWS 
+    for (i = 0; i < data.length; i++) {
+        tr = table.insertRow(-1);
+        for (j = 0; j < col.length; j++) {
+        var tabCell = tr.insertCell(-1); 
+        tabCell.innerHTML = data[i][col[j]];
+        } 
+    }
+    var divContainer = document.getElementById(output); 
+    divContainer.innerHTML = ""; 
+    divContainer.appendChild(table);
+    $(output).toggle();
+    }
+    }); 
+</script>
 </html>
+ 
