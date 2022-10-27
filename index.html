@@ -89,6 +89,7 @@
 					// Step 5: wait for done + success
 
 					result = request.responseText;
+					console.log(result)
 					parse_list = JSON.parse(result);
 					
 					parse_list.forEach(function(list) { 
