@@ -7,8 +7,9 @@
 </head>
 <style> 
     th,td,div,input {
-        font:14 px Verdana; }
-        table,th,td {
+        font:14 px Verdana; 
+    }
+    table,th,td {
         border: solid 1px #000000; padding: 2px 3px; text-align: center; border-collapse: collapse;
     }
     th {
@@ -19,15 +20,22 @@
 <body>
     <!-- Raw String -->
     <div id = "data">Loading... </div> </p> </p>
+
     <!-- User Friendly -->
     <input type = "button" id="showTable" value = "Toggle User Friendly View"> 
     <div id = "showData"></div> </p> </p>
+
     <!-- Table -->
-    <h2> Filter My Song List! </h2>
-    <p> Choose from a genre below and click 'Filter' to get a choice of songs in that genre!</p>
+    <h2> Filter Song List! </h2>
+    <p> Choose a genre below and click 'Filter' to get a choice of songs in that genre!</p>
     <form>
-        <label for="songs">Choose a genre:</label> <select id="songs" name="songs">
-        <option>Alternative</option> <option>Indie</option> <option>Electronic</option> <option>Pop</option> <option>Christian</option>
+        <label for="songs">Choose a genre:</label> 
+        <select id="songs" name="songs">
+            <option>Alternative</option> 
+            <option>Indie</option> 
+            <option>Electronic</option> 
+            <option>Pop</option> 
+            <option>Christian</option>
         </select>
         <input type="button" id="filter" value="Filter">
     </form>
