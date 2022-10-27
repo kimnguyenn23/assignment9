@@ -32,37 +32,37 @@
 
     <body onload="loadFile()">
         <h1>The Amazing List of Songs</h1>
-    <table id = "songTable">
-      <tr>
-        <td id = "1"></td>
-        <td id = "2"></td>
-        <td id = "3"></td>
-        <td id = "4"></td>
-      </tr>
-      <tr>
-        <td id = "5"></td>
-        <td id = "6"></td>
-        <td id = "7"></td>
-        <td id = "8"></td>
-      </tr>
-      <tr>
-        <td id = "9"></td>
-        <td id = "10"></td>
-        <td id = "11"></td>
-        <td id = "12"></td>
-      </tr>
-      <tr>
-        <td id = "13"></td>
-        <td id = "14"></td>
-        <td id = "15"></td>
-        <td id = "16"></td>
-      </tr>
-      <tr>
-        <td id = "17"></td>
-        <td id = "18"></td>
-        <td id = "19"></td>
-      </tr>
-    </table>
+            <table id = "songTable">
+            <tr>
+                <td id = "1"></td>
+                <td id = "2"></td>
+                <td id = "3"></td>
+                <td id = "4"></td>
+            </tr>
+            <tr>
+                <td id = "5"></td>
+                <td id = "6"></td>
+                <td id = "7"></td>
+                <td id = "8"></td>
+            </tr>
+            <tr>
+                <td id = "9"></td>
+                <td id = "10"></td>
+                <td id = "11"></td>
+                <td id = "12"></td>
+            </tr>
+            <tr>
+                <td id = "13"></td>
+                <td id = "14"></td>
+                <td id = "15"></td>
+                <td id = "16"></td>
+            </tr>
+            <tr>
+                <td id = "17"></td>
+                <td id = "18"></td>
+                <td id = "19"></td>
+            </tr>
+            </table>
      <script>
         // request_songs = new XMLHttpRequest();
         // reqObj.open("GET", "songlist.json");
@@ -92,10 +92,9 @@
                     console.log(result);
 					parse_list = JSON.parse(result);
 					
-					parse_list.forEach(function(list) { 
-						console.log("hello");
-						console.log(list);
-						strHTML += "Title: " + list.title + "Artist: " + list.artist + "Year: " + list.year + "Genre(s): " + list.genre;
+					Array.from(parse_list).forEach(function(list) { 
+                        // console.log(list);
+					    strHTML += "Title: " + list.title + "Artist: " + list.artist + "Year: " + list.year + "Genre(s): " + list.genre;
 					}) 
 					document.getElementById("data").innerHTML =strHTML;  
 				}
